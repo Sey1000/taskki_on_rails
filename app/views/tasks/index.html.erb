@@ -1,0 +1,6 @@
+<h1>Tasks</h1>
+<% @tasks.each do |task| %>
+  <p>
+    <%= task.title %> - <%= task.due.strftime("%b %d") %>
+  </p>
+<% end %>
