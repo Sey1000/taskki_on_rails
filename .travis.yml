@@ -1,0 +1,12 @@
+language: ruby
+cache: bundler
+services:
+  - redis-server
+addons:
+  postgresql: '9.6'
+before_script:
+  - psql -c 'create database taskki_on_rails_test;' -U postgres
+script:
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake test test:system
