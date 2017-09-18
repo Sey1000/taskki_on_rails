@@ -18,3 +18,6 @@
 *.swp
 .DS_Store
 public/assets
+
+# Ignore coverage data
+/coverage/*
