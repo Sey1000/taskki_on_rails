@@ -6,4 +6,9 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get new" do
+    login_as users(:one)
+    get '/tasks/new'
+    assert_response :success
+  end
 end
