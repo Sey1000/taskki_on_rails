@@ -13,10 +13,9 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create task" do
+    login_as users(:one)
     assert_difference('Task.count', +1) do
-      post tasks_url, params: { task: { title: 'testing task title!', due: 'Sep 21' } }
+      post tasks_url, params: { task: { title: 'testing task title', due: 'Sep 21' } }
     end
   end
-  # post :create do sth
-  # Task.count == 1
 end
