@@ -11,15 +11,15 @@ class TasksTest < ApplicationSystemTestCase
     assert_selector ".task", count: Task.count
   end
 
-  # test "lets a signed in user create a new task" do
-  #   login_as users(:one)
-  #   visit '/tasks/new'
+  test "lets a signed in user create a new task" do
+    login_as users(:one)
+    visit '/tasks/new'
 
-  #   fill_in 'task_title', with: "Lunch with Sey"
-  #   fill_in 'task_due', with: "Sep 18"
-  #   click_on 'Create Task'
+    fill_in 'task_title', with: "Lunch with Sey"
+    fill_in 'task_due', with: "Sep 20"
+    click_on 'Create Task'
 
-  #   assert_equal root_path, page.current_path
-  #   assert_text "Lunch with Sey"
-  # end
+    assert_equal root_path, page.current_path
+    assert_text "Lunch with Sey"
+  end
 end
