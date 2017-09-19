@@ -38,6 +38,8 @@ group :development, :test do
   gem 'poltergeist'
   gem 'minitest-reporters'
   gem 'launchy'
+
+  gem 'rails-controller-testing'
 end
 
 group :development do
